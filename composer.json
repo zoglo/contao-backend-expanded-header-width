@@ -1,0 +1,60 @@
+
+{
+    "name": "zoglo/contao-backend-expanded-header-width",
+    "description": "This Contao bundle reintroduces the expanded header width for the backend",
+    "keywords": [
+        "contao",
+        "backend",
+        "header",
+        "expanded",
+        "width",
+        "ux"
+    ],
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Zoglowek",
+            "homepage": "https://github.com/zoglo",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zoglo/contao-backend-expanded-header-width/issues",
+        "source": "https://github.com/zoglo/contao-backend-expanded-header-width",
+        "forum": "https://community.contao.org"
+    },
+    "require": {
+        "php": "^8.2",
+        "contao/core-bundle": "^5.7",
+        "symfony/asset": "^7.4 || ^8.0",
+        "symfony/http-kernel": "^7.4 || ^8.0",
+        "symfony/dependency-injection": "^7.4 || ^8.0",
+        "symfony/event-dispatcher": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "shipmonk/composer-dependency-analyser": "^1.8"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zoglo\\BackendExpandedHeaderWidthBundle\\": "src/"
+        }
+    },
+    "scripts": {
+        "depcheck": "@php vendor/bin/composer-dependency-analyser --config=depcheck.php"
+    },
+    "extra": {
+        "contao-manager-plugin": "Zoglo\\BackendExpandedHeaderWidthBundle\\ContaoManager\\Plugin"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": false,
+            "contao/manager-plugin": false,
+            "php-http/discovery": false
+        }
+    }
+}

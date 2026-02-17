@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    zoglo_backend_expanded_header_width.listener.add_assets:
+        class: Zoglo\BackendExpandedHeaderWidthBundle\EventListener\BackendAssetsListener
+        arguments:
+            - '@contao.routing.scope_matcher'
+            - '@assets.packages'
